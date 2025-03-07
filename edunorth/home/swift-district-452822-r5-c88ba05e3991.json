@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "swift-district-452822-r5",
+  "private_key_id": "c88ba05e39915e52ac692724e24045292b02d484",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDrs+M9XVywxVw2\nAFxEONLiR/mcE/HiqmEluSYFQpdFGG6eD9/XKC8sD6cMMfIby3PrXLnwwDcA5O0B\nJ/lSAWQ8Av2r1TTRJMdDDr6S5pgf1IVvdCD5uiHbjFtcY4EUPVMu/2rxVW4nygjy\nW6TuLNrrz+Kg9+XUdc3RJKwOFq2g4Se/aN92DcAT7f3jpc10k5E/EjN4eumCmF1p\ncHmhU6IlUwXSvYM6J4QpBrl17Ce8d0Uu+ZgSC3pC8MTDzk2UUeXSAjnD2oe159ch\n5g1ESW74+N8PAPL+nt4aBqrp5/ZwPzycDT5giYVtLNv/0Y4t33azmIRuelC8SX81\nh48cNcFJAgMBAAECggEAAOQNWuX9r0aSyuVYgiZHKfx/fKb/3h8jc80vlxLG8MBw\n6l2Et12LJ25zKF9kSTkbYQYY43owuUA5lMHJnU4XbiQUModr9GBK50hIu9Q8AZDK\nlqXxkvZF79/15owhLEoatmiCqtLkawzp2K/7X1j24r44XrHgRXg2ZruKONJo18Cd\nkulXKmX0nMBHMM9icjxispeQ7aWKM54+zDTPeXunM0Px80shiACJPtJltosDHFHg\n5UVQxwgXJYRfzdCnsuh9k7OoCMzFdzvvKAZ7h+KtSWMgZ1GBK30pVVeVElH9299u\niBuPXVhgWQ0CD25UzUvIcMWUqdO9aA7VJraaFqiBdQKBgQD8TCbU/zm9Kg0XBgjO\nTKgPPs1w/mNCL4shqd3GgGA6y4m11PareCDI/QioncQBTP0yqUMluEMAngcNM0U0\nD6M+GfYBnxgqSmTQaF/VePTwMFG3Lwz1Ztc61aGPgchmld5het/QQITlhVj6AAiU\nidNOq51CNsh+jxTR4s+RZR4yHQKBgQDvKWQ9b0Rs+0ZVkDi80/nQ+XqgNTkkTfez\nzYdfp6Mk8cQmxtRQ+WTmYeeFjTGqldf1XyrtcQfTE7zbdNhD6fHg96CLniQ/RQew\nnDZR045PWOuVxewxnubbKQk9nSuFUDdiQHY8lbTX2VW8DRp4M/cRquJgmd2BMiev\nbcnLb1YkHQKBgQCS/TLqiT/0a5lwvn1G4/ZN24MJv8vIdbaTiEnDKmvmFUtH+qkz\nwSsorfLree8F6vrhFygdw7qVk3v8PtCkwi+TMMDYtP35NZqCqSycTHo3rY8OMIVW\nO/JNPsV/vFcrHUmQdWwMAmrq5cOu83IMSDgp72YRe6VXxriUh5Xy2Xy8KQKBgQCW\nTzhd2CF0MRSKUCMooj0e1rz4FZs9Mvdb/O948d36KSyzhkEIR0Xf+WZOLGgroxNg\ndph/NIvLYFtQvgXx4QWQ83DmbtSvIw5rNDJ7iO+m9ObTcdo5cXn8AbV6EN66Yaj9\nSjBFcX2AL2rPzph1NYuxgenW9r0dJs2EVwb9oZLNDQKBgCftdwkHg1A7RDRY3obz\nV16vp8InZP0NazxXOeiCrXQ4qCGKXuMUJ8+VRc3Ls2jwgKkVXj05e0odSM8qTXJB\nqMxWuFc9f6sH4O5wWVmZzK1v08Ir3BBSQ+nDrBH/IonSAgZP6okIZgfQmmKB0NKJ\nxLEkg13GtEHyosFKqOx3e92I\n-----END PRIVATE KEY-----\n",
+  "client_email": "gang-form@swift-district-452822-r5.iam.gserviceaccount.com",
+  "client_id": "108359309971595931954",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gang-form%40swift-district-452822-r5.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
