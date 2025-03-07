@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand{
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        @font-face {
+            font-family: 'Evergreen Sans';
+            src: url('fonts/EvergreenSans.woff2') format('woff2'),
+                 url('fonts/EvergreenSans.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .edu {
+            color:  #FF671F; /* Blue for "Edu" */
+        }
+        
+        .north {
+            color: #FFFFFF; /* Orange for "Northeast" */
+        }
+        .east{
+        color: #046A38;
+        }
+        
+           
+        body {
+            background-color: #f8f9fa;
+        }
+        .section1{
+            min-height: 40vh;
+        }
+        .btn-browse {
+            background-image: linear-gradient(to right, #50C9C3 0%, #96DEDA 51%, #50C9C3 100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            border-radius: 10px;
+            display: block;
+            border: none;
+            font-weight: bold;
+            outline: none;
+        }
+    
+        .btn-browse:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+        .job-listing {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .job-listing:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .job-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .job-details h5 {
+            margin-bottom: 5px;
+        }
+        .job-details small {
+            color: #6c757d;
+        }
+        .dropdown-btn {
+            background-color: #359df8;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dropdown-btn:hover {
+            background-color: #267ac3;
+        }
+         /* Gradient Button Styling */
+         .btn-grad {
+            background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+            margin: 10px;
+            padding: 12px 20px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+        .btn-grad-detail {
+            background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+            margin: 10px;
+            padding: 12px 20px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-grad-detail:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-expand-lg bg-dark navbar-dark align-items- sticky-top custom-navbar">
+        <div class="container d-flex align-items-center"><a href="#companylogo" class="navbar-brand">   <span class="edu">Edu</span><span class="north">North</span><span class="east">East</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span
+                class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto d-flex align-items-center ">
+                    <li class="nav-item mx-3" ><a href="{ % url 'personalised' % }" class="nav-link">start learning</a> </li>
+    
+                    <li  class="nav-item mx-3" ><a href="/joblisting" class="nav-link">get employed</a></li>
+                    <li class="nav-item mx-3" ><a href="/aboutUs" class="nav-link">about us </a></li>
+                    <li class="nav-item mx-3" ><a href="http://127.0.0.1:8000/logout" class="nav-link"><button class="btn btn-danger">logout</button>  </a></li>
+                        <li class="nav-item mx-3 align-self-center ">
+                            <a href="/profile" class="nav-link">
+                                <img src="/assets/boy.png" alt="Profile" class="profile-img custom-profile-img  " height="50px">
+                            </a>
+                        </li>
+    
+                      
+    
+                </ul>
+            </div>
+        </div>
+        
+       
+        
+
+    </nav>
+    <div class="container-fluid  text-dark py-5 section1"style="background-color: #359df8;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Looking for a Job?</h2>
+                    <p>Find your dream job with quick approvals and verified listings.</p>
+                    <button class="btn btn-browse">Browse Jobs</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="/assets/NA_October_10.jpg" alt="Job Search" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 bg-dark pb-3">
+        <h3 class="mb-4">Jobs Available</h3>
+
+        <!-- Job 1 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">💻</div>
+                <div class="job-details">
+                    <h5>Senior Frontend Developer
+                     (   Jio)
+                        </h5>
+                    <small>Navi Mumbai, Maharashtra, India (On-site)</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job1">
+                    View Details
+                </button>
+                <a href="https://www.linkedin.com/jobs/search/?currentJobId=4148835178&geoId=102713980&keywords=app%20and%20web%20development&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true
+">
+                    <button class="btn btn-grad">Apply Now</button>
+                </a>
+            </div>
+        </div>
+        <div id="job1" class="collapse p-3">
+            <p class="text-light">About the job
+            We at Jio are hiring for a highly skilled Senior Frontend Developer UI experience in designing and developing modern, scalable, and high-performance web applications for Ghansoli, Navi Mumbai 
+            Requirements
+            Experience: 6 to 10 years of experience in frontend development.
+            Education: Bachelor's degree in any stream
+                .</p>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">📊</div>
+                <div class="job-details">
+                    <h5>Ecommerce Front-end Developer
+                       ( Pall Corporation)
+                        </h5>
+                    <small>Maharashtra, India</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job2">
+                    View Details
+                </button>
+               <a href="https://www.linkedin.com/jobs/search/?currentJobId=4176970733&geoId=102713980&keywords=app%20and%20web%20development&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true
+"> <button class="btn btn-grad">Apply Now</button></a>
+            </div>
+        </div>
+        <div id="job2" class="collapse p-3">
+            <p class="text-light">About Birlasoft:
+
+                Pall Corporation
+                Maharashtra, India
+                About the job
+                Bring more to life.
+                Are you ready to accelerate your potential and make a real difference within life sciences, diagnostics and biotechnology?
+                At Pall Corporation, one of Danaher’s 15+ operating companies, our work saves lives—and we’re all united by a shared commitment to innovate for tangible impact.
+                You’ll thrive in a culture of belonging where you and your unique viewpoint matter. And by harnessing Danaher’s system of continuous improvement, you help turn ideas into impact – innovating at the speed of life.
+                As a global leader in high-tech filtration, separation, and purification, Pall Corporation thrives on helping our customers solve their toughest challenges. Our products serve diverse, global customer needs across a wide range of applications to advance health, safety and environmentally responsible technologies. From airplane engines to hydraulic systems, scotch to smartphones, OLED screens to paper—everyday Pall is there, helping protect critical operating assets, improve product quality, minimize emissions and waste, and safeguard health. For the exponentially curious, Pall is a place where you can thrive and amplify your impact on the world. Find what drives you on a team with a more than 75-year history of discovery,
+                </p>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">🎨</div>
+                <div class="job-details">
+                    <h5>Silicon Engineering Internship Opportunities: Second-Year Students
+                      (  Microsoft)
+                        </h5>
+                    <small>Lakshadweep, India</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job3">
+                    View Details
+                </button>
+                <a href="https://www.linkedin.com/jobs/search/?currentJobId=4176553393&geoId=102713980&keywords=app%20and%20web%20development&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true"> <button class="btn btn-grad">Apply Now</button></a>
+               
+            </div>
+        </div>
+        <div id="job3" class="collapse p-3">
+            <p class="text-light">About the job
+                Come build community, explore your passions and do your best work at Microsoft with thousands of University interns from every corner of the world. This opportunity will allow you to bring your aspirations, talent, potential—and excitement for the journey ahead. 
+                A Silicon Engineering Intern designs, develops, modifies and evaluates electronic parts, components, or integrated circuitry for digital electronic devices and other digital electronic systems. Defines design architecture and operating parameters for circuitry and microelectronic components. Selects components and equipment based on analysis of specifications and reliability. Analyzes designs and components to establish operating parameters and performance requirements to define complete pre-silicon verification test cases. Develops test plans and directs support personnel, or other engineers, in the preparation and execution of design verification testing. Analyzes data generated from test results to perform pre-silicon verification of operating parameters and performance requirements. 
+                
+                
+                
+                </p>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">📝</div>
+                <div class="job-details">
+                    <h5>
+                        Technology Architect (Full Stack)
+                       (Contract
+                       Workverse
+                       )</h5>
+                    <small>
+                        Mumbai Metropolitan Region (On-site)
+
+                        </small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class=" btn btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job4">
+                    View Details
+                </button>
+                <a href="https://www.linkedin.com/jobs/search/?currentJobId=4150031677&geoId=102713980&keywords=app%20and%20web%20development&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true"><button class="btn btn-grad">Apply Now</button></a>
+                
+            </div>
+        </div>
+        <div id="job4" class="collapse p-3">
+            <p class="text-light">About Workverse 
+                Formerly X Billion Skills Lab, Workverse is a virtual world of work where youth master essential soft skills and behavioral skills. Our mission is to empower young professionals to thrive alongside artificial intelligence at work, instead of being replaced by it. 
+                In the Workverse, learners “work” in an imaginary company where they tackle 100s of business scenarios and compete to become the CEO of the organization. Each of them have access to a mentor “Neuroda” who is the world’s first a.i soft skills coach. He guides them to make choices in the simulation thereby fusing learning, assessment and practice. 
+                In our past version (offline training based on the principles of simulation and gamification) we have enabled 50,000+ learners to gain a unique edge in placements, perform better than the average candidate at work, and build automation-proof careers.</p>
+        </div>
+
+    </div>
+    <footer class="bg-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <!-- Explore Section -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none">Start-learning</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">getemployed</a></li>
+                        
+                    </ul>
+                </div>
+    
+                <!-- About Us Section -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#our-mission" class="text-dark text-decoration-none">Our Mission</a></li>
+                        <li><a href="#our-team" class="text-dark text-decoration-none">Our Team</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Section -->
+                <!-- <div class="col-md-3">
+                    <h5 class="fw-bold">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none">Email Us</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">Call Us</a></li>
+                    </ul>
+                </div> -->
+                <!-- Contact Section -->
+    <div class="col-md-3">
+        <h5 class="fw-bold">Contact</h5>
+        <ul class="list-unstyled">
+            {% load static %}
+            <li>
+                <a href="mailto:your-email@example.com" class="text-dark text-decoration-none">
+                    <img src="{% static 'assets/gmail.png' %}" alt="Email" width="20" height="20"> Email Us
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/yogeshbhanwaria?igsh=ZjVxOWlzYTJhNDV2" target="_blank" class="text-dark text-decoration-none">
+                    <img src="{% static 'assets/instagram.png' %}" alt="Instagram" width="20" height="20"> Follow Us on Instagram
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+              
+    <div class="col-md-3">
+        <h5 class="fw-bold">EduNortheast</h5>
+        <p>EduNortheast is dedicated to providing students with the latest courses, scholarships, and job opportunities. Our platform connects learners with valuable resources to help them achieve their academic and career goals.</p>
+    </div>
+    
+            </div>
+    
+            <hr class="my-4">
+    
+            <!-- Bottom Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 EduNortheast. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-dark me-3 text-decoration-none">Terms-and-conditions</a>
+                    <a href="#" class="text-dark text-decoration-none">Privacy-policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand{
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        @font-face {
+            font-family: 'Evergreen Sans';
+            src: url('fonts/EvergreenSans.woff2') format('woff2'),
+                 url('fonts/EvergreenSans.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .edu {
+            color:  #FF671F; /* Blue for "Edu" */
+        }
+        
+        .north {
+            color: #FFFFFF; /* Orange for "Northeast" */
+        }
+        .east{
+        color: #046A38;
+        }
+        
+           
+        body {
+            background-color: #f8f9fa;
+        }
+        .section1{
+            min-height: 40vh;
+        }
+        .btn-browse {
+            background-image: linear-gradient(to right, #50C9C3 0%, #96DEDA 51%, #50C9C3 100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            border-radius: 10px;
+            display: block;
+            border: none;
+            font-weight: bold;
+            outline: none;
+        }
+    
+        .btn-browse:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+        .job-listing {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .job-listing:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .job-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .job-details h5 {
+            margin-bottom: 5px;
+        }
+        .job-details small {
+            color: #6c757d;
+        }
+        .dropdown-btn {
+            background-color: #359df8;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dropdown-btn:hover {
+            background-color: #267ac3;
+        }
+         /* Gradient Button Styling */
+         .btn-grad {
+            background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+            margin: 10px;
+            padding: 12px 20px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+        .btn-grad-detail {
+            background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+            margin: 10px;
+            padding: 12px 20px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-grad-detail:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-expand-lg bg-dark navbar-dark align-items- sticky-top custom-navbar">
+        <div class="container d-flex align-items-center"><a href="#companylogo" class="navbar-brand">   <span class="edu">Edu</span><span class="north">North</span><span class="east">East</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span
+                class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto d-flex align-items-center ">
+                    {% comment %} <li class="nav-item mx-3" ><a href="{% url 'personalised' %}" class="nav-link fw-bold" name="personalised">start learning</a> </li>
+    
+                    <li  class="nav-item mx-3" ><a href="{% url 'joblisting' %}" class="nav-link fw-bold" name="joblisting">get employed</a></li>
+                    <li class="nav-item mx-3" ><a href="{% url 'about' %}" class="nav-link fw-bold" name="about">about us </a></li> {% endcomment %}
+                    <li class="nav-item mx-3 custom-nav-list">
+                        <a href="{% url 'personalised' %}" class="nav-link fs-5 text-white " name="personalised">Start Learning</a>
+                    </li>
+                    
+                    <li class="nav-item mx-3 custom-nav-list">
+                        <a href="{% url 'joblisting' %}" class="nav-link fs-5 text-white" name="joblisting">Get Employed</a>
+                    </li>
+                    
+                    <li class="nav-item mx-3 custom-nav-list">
+                        <a href="{% url 'about' %}" class="nav-link fs-5 text-white" name="about">About Us</a>
+                    </li>
+                    <li class="nav-item mx-3" ><a href="http://127.0.0.1:8000/logout" class="nav-link"><button class="btn btn-danger">logout</button>  </a></li>
+                        <li class="nav-item mx-3 align-self-center ">
+                            <a href="{% url 'profile' %}" name="profile" class="nav-link">
+                                {% load static %}
+<img src="{% static 'assets/boy.png' %}" alt="Profile" class="profile-img custom-profile-img" height="50px">
+
+                            </a>
+                        </li>
+    
+                      
+    
+                </ul>
+            </div>
+        </div>
+        
+       
+        
+
+    </nav>
+    <div class="container-fluid  text-dark py-5 section1"style="background-color: #359df8;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <h2>Looking for a Job?</h2>
+                    <p>Find your dream job with quick approvals and verified listings.</p>
+                    <button class="btn btn-browse">Browse Jobs</button>
+                </div>
+             
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 bg-dark pb-3">
+        <h3 class="mb-4">Jobs Available</h3>
+
+        <!-- Job 1 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">💻</div>
+                <div class="job-details">
+                    <h5>Machine Learning Engineer
+                        (SGS & Co)
+                        </h5>
+                    <small>India (Remote)</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job1">
+                    View Details
+                </button>
+                <a href="https://www.linkedin.com/jobs/search/?currentJobId=4172622044&keywords=ai%20%26%20ml&origin=JOBS_HOME_SEARCH_BUTTON&refresh=true">
+                    <button class="btn btn-grad">Apply Now</button>
+                </a>
+            </div>
+        </div>
+        <div id="job1" class="collapse p-3">
+            <p class="text-light">Role Description
+                As an AI/ML Engineer at MySGS & Co., you will play a key role in designing, developing, and maintaining machine learning (ML) systems and AI-driven automation solutions. You will collaborate closely with product managers, data scientists, data engineers, architects, and other cross-functional teams to build scalable and production-ready ML models. Your role will focus on both ML development and MLOps, ensuring seamless deployment, monitoring, and automation of ML models in real-world applications.
+                You will be responsible for optimizing end-to-end ML pipelines, automating workflows, managing model lifecycle operations (MLOps), and ensuring AI systems are scalable and cost-efficient. You will embrace a build-measure-learn approach, continuously iterating and improving models for performance and reliability.
+                .</p>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">📊</div>
+                <div class="job-details">
+                    <h5>Machine Learning Engineer
+                  (      Birlasoft)
+                        </h5>
+                    <small>Bengaluru, Karnataka, India (Hybrid)</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job2">
+                    View Details
+                </button>
+               <a href="https://www.linkedin.com/jobs/search/?currentJobId=4148728964&keywords=ai%20%26%20ml&origin=JOBS_HOME_SEARCH_BUTTON&refresh=true
+"> <button class="btn btn-grad">Apply Now</button></a>
+            </div>
+        </div>
+        <div id="job2" class="collapse p-3">
+            <p class="text-light">About Birlasoft:
+
+                Birlasoft, a powerhouse where domain expertise, enterprise solutions, and digital technologies converge to redefine business processes. We take pride in our consultative and design thinking approach, driving societal progress by enabling our customers to run businesses with unmatched efficiency and innovation. As part of the CK Birla Group, a multibillion-dollar enterprise, we boast a 12,500+ professional team committed to upholding the Group's 162-year legacy. Our core values prioritize Diversity, Equity, and Inclusion (DEI) initiatives, along with Corporate Sustainable Responsibility (CSR) activities, demonstrating our dedication to building inclusive and sustainable communities. Join us in shaping a future where technology seamlessly aligns with purpose.
+                </p>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">🎨</div>
+                <div class="job-details">
+                    <h5>Silicon Engineering Internship Opportunities: Second-Year Students
+                      (  Microsoft)
+                        </h5>
+                    <small>Delhi, India</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job3">
+                    View Details
+                </button>
+                <a href="https://www.linkedin.com/jobs/search/?currentJobId=4176548861&keywords=ai%20%26%20ml&origin=JOBS_HOME_SEARCH_BUTTON&refresh=true
+
+"> <button class="btn btn-grad">Apply Now</button></a>
+               
+            </div>
+        </div>
+        <div id="job3" class="collapse p-3">
+            <p class="text-light">About the job
+                Come build community, explore your passions and do your best work at Microsoft with thousands of University interns from every corner of the world. This opportunity will allow you to bring your aspirations, talent, potential—and excitement for the journey ahead. 
+                A Silicon Engineering Intern designs, develops, modifies and evaluates electronic parts, components, or integrated circuitry for digital electronic devices and other digital electronic systems. Defines design architecture and operating parameters for circuitry and microelectronic components. Selects components and equipment based on analysis of specifications and reliability. Analyzes designs and components to establish operating parameters and performance requirements to define complete pre-silicon verification test cases. Develops test plans and directs support personnel, or other engineers, in the preparation and execution of design verification testing. Analyzes data generated from test results to perform pre-silicon verification of operating parameters and performance requirements. 
+                </p>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="job-listing">
+            <div class="job-info">
+                <div class="job-icon">📝</div>
+                <div class="job-details">
+                    <h5>Machine Learning Specialist
+                       ( Searce Inc)</h5>
+                    <small>
+                        Pune, Maharashtra, India (On-site)
+                        </small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-grad-detail" type="button" data-bs-toggle="collapse" data-bs-target="#job4">
+                    View Details
+                </button>
+                <a href="https://www.linkedin.com/jobs/search/?currentJobId=4165421868&keywords=ai%20%26%20ml&origin=JOBS_HOME_SEARCH_BUTTON&refresh=true"><button class="btn btn-grad">Apply Now</button></a>
+                
+            </div>
+        </div>
+        <div id="job4" class="collapse p-3">
+            <p class="text-light">About the job
+                Job Responsibilities
+                Understand business goals and develop models with measurable success metrics.
+                Manage resources (hardware, data, personnel) to meet project deadlines.
+                Analyze and rank ML algorithms for problem-solving.
+                Explore and visualize data, identifying distribution differences that impact model performance.
+                Share knowledge, implement best practices, and contribute to team growth.
+                Clean and verify data quality.
+                Supervise data acquisition and search for external datasets for training.
+                Define validation strategies and work with DocAI and Vision API.
+                Build, maintain, and improve machine learning algorithms and systems.
+                Develop scalable, automated processes for model development.
+                Identify new opportunities to optimize processes and improve user experiences.
+                Train models, tune hyperparameters, and deploy to production.
+                Work within the GCP Ecosystem.</p>
+        </div>
+
+    </div>
+    <footer class="bg-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <!-- Explore Section -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none">Start-learning</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">getemployed</a></li>
+                        
+                    </ul>
+                </div>
+    
+                <!-- About Us Section -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#our-mission" class="text-dark text-decoration-none">Our Mission</a></li>
+                        <li><a href="#our-team" class="text-dark text-decoration-none">Our Team</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Section -->
+                <!-- <div class="col-md-3">
+                    <h5 class="fw-bold">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark text-decoration-none">Email Us</a></li>
+                        <li><a href="#" class="text-dark text-decoration-none">Call Us</a></li>
+                    </ul>
+                </div> -->
+                <!-- Contact Section -->
+    <div class="col-md-3">
+        <h5 class="fw-bold">Contact</h5>
+        <ul class="list-unstyled">
+            {% load static %}
+            <li>
+                <a href="mailto:your-email@example.com" class="text-dark text-decoration-none">
+                    <img src="{% static 'assets/gmail.png' %}" alt="Email" width="20" height="20"> Email Us
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/yogeshbhanwaria?igsh=ZjVxOWlzYTJhNDV2" target="_blank" class="text-dark text-decoration-none">
+                    <img src="{% static 'assets/instagram.png' %}" alt="Instagram" width="20" height="20"> Follow Us on Instagram
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+              
+    <div class="col-md-3">
+        <h5 class="fw-bold">EduNortheast</h5>
+        <p>EduNortheast is dedicated to providing students with the latest courses, scholarships, and job opportunities. Our platform connects learners with valuable resources to help them achieve their academic and career goals.</p>
+    </div>
+    
+            </div>
+    
+            <hr class="my-4">
+    
+            <!-- Bottom Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 EduNortheast. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-dark me-3 text-decoration-none">Terms-and-conditions</a>
+                    <a href="#" class="text-dark text-decoration-none">Privacy-policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

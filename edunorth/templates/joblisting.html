@@ -1,0 +1,275 @@
+ <!DOCTYPE html>
+<html lang="en">
+   
+<head  {% load static %}>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/joblisting.css' %}">
+<style> .job-search-section {
+    {% load static %}
+    background: url( 'assets/employee.png' ) center/cover no-repeat;
+    position: relative;
+    padding: 100px 0;
+}</style>
+
+</head>
+<body>
+    <nav class="navbar-expand-lg bg-dark navbar-dark align-items- sticky-top custom-navbar">
+        <div class="container d-flex align-items-center"><a href="#companylogo" class="navbar-brand">   <span class="edu">Edu</span><span class="north">North</span><span class="east">East</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span
+                class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto d-flex align-items-center ">
+                    <li class="nav-item mx-3" ><a href="{% url 'personalised' %}" class="nav-link fs-5 text-white" name="personalised">Start Learning</a> </li>
+    
+                    <li  class="nav-item mx-3" ><a href="/joblisting" class="nav-link fs-5 text-white">Get Employed</a></li>
+                    <li class="nav-item mx-3" ><a href="{% url 'about' %}" class="nav-link fs-5 text-white" name="about">About Us </a></li>
+                    <li class="nav-item mx-3" ><a href="http://127.0.0.1:8000/" class="nav-link"><button class="btn btn-success">Home</button>     </a></li>
+    
+                        {% load static %}
+
+                        <li class="nav-item mx-3 align-self-center">
+                            <a href="{% url 'profile' %}" class="nav-link" name="profile">
+                                <img src="{% static 'assets/boy.png' %}" alt="Profile" class="profile-img custom-profile-img" height="50px">
+                            </a>
+                        </li>
+                        
+    
+                   
+                </ul>
+            </div>
+        </div>
+        
+       
+        
+
+    </nav>
+
+
+  <!-- Job Search Section -->
+<section class="job-search-section text-white mt-1"  >
+    <div class="container">
+        <div class="job-search-overlay">
+            <h2 class="text-center mb-3">Find Your Dream Job</h2>
+            <p class="text-center">Search jobs based on your domain, education, and skills.</p>
+
+            <div class="row g-3 justify-content-center">
+                <!-- First Row: Two Inputs -->
+                <div class="col-md-5">
+                    <select class="form-select" id="domain" onchange="redirectToPage()">
+                        <option value="" selected>Select Domain</option>
+                        <option value="/ai_ml">Artificial Intelligence & Machine Learning</option>
+                        <option value="/finance">Finance</option>
+                        <option value="/cybersecurity">Cybersecurity & Ethical Hacking</option>
+                        <option value="/web_dev">App & Web Development</option>
+                        <option value="/blockchain">Web3 & Blockchain</option>
+                        <option value="/data_science">Data Science & Analytics</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <select class="form-select" id="grad-year">
+                        <option selected>Graduation Year</option>
+                        <script>
+                            let currentYear = new Date().getFullYear();
+                            for (let i = currentYear; i >= currentYear - 10; i--) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+
+                <!-- Second Row: Two Inputs -->
+                <div class="col-md-5">
+                    <input type="text" class="form-control" id="college" placeholder="Enter College Name">
+                </div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" id="skills" placeholder="Enter Your Skills (e.g., Python, AI)">
+                </div>
+
+                <!-- Submit Button (Centered) -->
+                <div class="col-md-4 mt-3">
+                    <button class="btn btn-primary search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="mid-line"></div>
+<!-- Empowering Youth Section -->
+<section class="empower-section py-5 text-white mt-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Side: Text Content -->
+            <div class="col-md-6">
+                <h2 class="mb-3">Empowering Youth in India</h2>
+                <p>
+                    In today's fast-paced world, skill development is the key to unlocking endless opportunities. 
+                    With AI-driven education, we bridge the gap between learning and employment, ensuring that every student gains 
+                    industry-relevant skills. Our platform integrates cutting-edge artificial intelligence with personalized learning 
+                    paths, helping students upskill efficiently and land their dream jobs.  
+                </p>
+                <p>
+                    By leveraging technology and expert mentorship, we aim to create a future where young professionals are 
+                    not just job seekers but also industry leaders. Join us in reshaping the workforce of tomorrow!
+                </p>
+            </div>
+
+            <!-- Right Side: Image Container -->
+            <div class="col-md-6">
+                {% load static %}
+<div class="image-container">
+    <img src="{% static 'assets/job.jpg' %}" alt="Empowering Youth" class="img-fluid rounded">
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-light pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <!-- Explore Section -->
+            <div class="col-md-3">
+                <h5 class="fw-bold">Explore</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark text-decoration-none">Start-learning</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none">getemployed</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- About Us Section -->
+            <div class="col-md-3">
+                <h5 class="fw-bold">About Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#our-mission" class="text-dark text-decoration-none">Our Mission</a></li>
+                    <li><a href="#our-team" class="text-dark text-decoration-none">Our Team</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <!-- <div class="col-md-3">
+                <h5 class="fw-bold">Contact</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark text-decoration-none">Email Us</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none">Call Us</a></li>
+                </ul>
+            </div> -->
+            <!-- Contact Section -->
+<div class="col-md-3">
+    <h5 class="fw-bold">Contact</h5>
+    <ul class="list-unstyled">
+        {% load static %}
+        <li>
+            <a href="mailto:your-email@example.com" class="text-dark text-decoration-none">
+                <img src="{% static 'assets/gmail.png' %}" alt="Email" width="20" height="20"> Email Us
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/yogeshbhanwaria?igsh=ZjVxOWlzYTJhNDV2" target="_blank" class="text-dark text-decoration-none">
+                <img src="{% static 'assets/instagram.png' %}" alt="Instagram" width="20" height="20"> Follow Us on Instagram
+            </a>
+        </li>
+    </ul>
+</div>
+
+          
+<div class="col-md-3">
+    <h5 class="fw-bold">EduNortheast</h5>
+    <p>EduNortheast is dedicated to providing students with the latest courses, scholarships, and job opportunities. Our platform connects learners with valuable resources to help them achieve their academic and career goals.</p>
+</div>
+
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Bottom Section -->
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 EduNortheast. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-dark me-3 text-decoration-none">Terms-and-conditions</a>
+                <a href="#" class="text-dark text-decoration-none">Privacy-policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+  
+<script>
+    function redirectToPage() {
+        var domain = document.getElementById("domain").value;
+        if (domain) {
+            window.location.href = domain;
+        }
+    }
+</script>
+
+</body>
+</html> 
+
+
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/joblisting.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">Job Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-3"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item mx-3"><a href="/about" class="nav-link">About Us</a></li>
+                    <li class="nav-item mx-3"><a href="/contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="job-search-section text-white mt-3">
+        <div class="container">
+            <h2 class="text-center mb-3">Find Your Dream Job</h2>
+            <p class="text-center">Search jobs based on your domain, education, and skills.</p>
+            
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-6">
+                    <select class="form-select" id="domain" onchange="redirectToPage()">
+                        <option value="" selected>Select Domain</option>
+                        <option value="/ai_ml">Artificial Intelligence & Machine Learning</option>
+                        <option value="/finance">Finance</option>
+                        <option value="/cybersecurity">Cybersecurity & Ethical Hacking</option>
+                        <option value="/web_dev">App & Web Development</option>
+                        <option value="/blockchain">Web3 & Blockchain</option>
+                        <option value="/data_science">Data Science & Analytics</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function redirectToPage() {
+            var domain = document.getElementById("domain").value;
+            if (domain) {
+                window.location.href = domain;
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> {% endcomment %}
