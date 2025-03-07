@@ -1,0 +1,83 @@
+.job-search-section {
+    background: url( 'assets/employee.png' ) center/cover no-repeat;
+    position: relative;
+    padding: 100px 0;
+}
+.job-search-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.form-select, .form-control {
+    height: 50px;
+    font-size: 16px;
+}
+
+.search-btn {
+    height: 50px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.navbar-brand{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+@font-face {
+    font-family: 'Evergreen Sans';
+    src: url('fonts/EvergreenSans.woff2') format('woff2'),
+         url('fonts/EvergreenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.edu {
+    color:  #FF671F; /* Blue for "Edu" */
+}
+
+.north {
+    color: #FFFFFF; /* Orange for "Northeast" */
+}
+.east{
+color: #046A38;
+}
+
+/* Job Search Section - Light Theme */
+
+/* Empowering Youth Section - Darker Theme */
+.mid-line {
+    width: 80%; /* Make it a bit shorter than full width */
+    height: 3px; /* Thickness of the line */
+    background-color: #222222; /* Dark gray/black color */
+    margin: 40px auto; /* Adds spacing above & below, centers it */
+    border-radius: 2px; /* Slightly rounded edges */
+}
+
+.empower-section {
+    background-color: #f9f9f9; /* Soft white background */
+    color: #333333; /* Dark text for contrast */
+    padding: 80px 0;
+}
+
+.empower-section .image-container img {
+    width: 100%;
+    
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+}
+.empower-section h2 {
+    color: #222222; /* Slightly darker heading */
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.empower-section p {
+    color: #444444; /* Medium-dark gray for better readability */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 80%;
+}

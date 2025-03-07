@@ -1,0 +1,48 @@
+.custom-profile-img{
+   
+    margin-bottom: 10px!important ;
+}
+html {
+    scroll-behavior: smooth;
+}
+.navbar-brand{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+@font-face {
+    font-family: 'Evergreen Sans';
+    src: url('fonts/EvergreenSans.woff2') format('woff2'),
+         url('fonts/EvergreenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.edu {
+    color:  #FF671F; /* Blue for "Edu" */
+}
+
+.north {
+    color: #FFFFFF; /* Orange for "Northeast" */
+}
+.east{
+color: #046A38;
+}
+
+.custom-nav-link {
+    font-size: 1.3rem;  /* ✅ Increases font size */
+    font-weight: 700;   /* ✅ Makes text bold */
+    color: #ffffff !important;  /* ✅ Ensures text is pure white */
+    text-transform: uppercase;  /* ✅ Makes text all caps */
+    letter-spacing: 1px;  /* ✅ Adds slight spacing for elegance */
+}
+.custom-nav-link:hover {
+    color: #f8d210 !important;  /* ✅ Changes text to yellow on hover */
+}
+.custom-nav-list{
+    font-size: 1.3rem;  /* ✅ Increases font size */
+    font-weight: 700;   /* ✅ Makes text bold */
+    color: #ffffff !important;
+}
